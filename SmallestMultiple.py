@@ -6,8 +6,11 @@ def gcd(a, b):
 def lcm(a, b):
     return a * b//gcd(a, b)
 
-n = 1
-for i in range(1, 21):
-    n = lcm(n, i)
+def smallestMultiple(n):
 
-print(n)
+    for i in range(1, n + 1):
+        n = lcm(n, i)
+
+    return n
+
+print(smallestMultiple(20))
