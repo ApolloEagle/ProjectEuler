@@ -1,11 +1,15 @@
-squareOfSums = []
-sumOfSquares = []
-for i in range(1, 101):
-    squareOfSums.append(i)
-x = (sum(squareOfSums))**2
+def sumSquareDifference(n):
 
-for j in range(1, 101):
-    sumOfSquares.append(j**2)
-y = sum(sumOfSquares)
+    squareOfSums = []
+    sumOfSquares = []
+    for i in range(1, n + 1):
+        squareOfSums.append(i)
+    x = (sum(squareOfSums))**2
 
-print(x - y)
+    for j in range(1, n + 1):
+        sumOfSquares.append(j**2)
+    y = sum(sumOfSquares)
+
+    return (x - y)
+
+print(sumSquareDifference(100))
